@@ -1,0 +1,102 @@
+/*
+ * File: style.css
+ * Deskripsi: Gaya kustom untuk Sistem Informasi Masjid (SIMAS)
+ */
+
+/* 1. Pengaturan Global & Latar Belakang */
+body {
+    background-color: #f8f9fa; /* Warna latar belakang abu-abu sangat muda */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins yang modern (jika tersedia di browser) */
+}
+
+/* 2. Gaya Kartu (Card) */
+.card {
+    border: none; /* Menghilangkan border default */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Memberi bayangan yang lembut */
+    border-radius: 0.75rem; /* Membuat sudut lebih tumpul */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efek hover pada kartu yang bisa diklik */
+a .card:hover, a .card-body:hover {
+    transform: translateY(-5px); /* Sedikit terangkat saat disentuh mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Bayangan lebih jelas */
+    text-decoration: none; /* Memastikan tidak ada garis bawah */
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: 600; /* Membuat teks header lebih tebal */
+    padding: 1rem 1.25rem;
+}
+
+/* 3. Tombol (Button) */
+.btn {
+    border-radius: 0.5rem; /* Menyamakan sudut dengan kartu */
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* 4. Formulir (Form) */
+.form-control, .form-select {
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Efek glow biru saat aktif */
+}
+
+/* 5. Tabel (Table) */
+.table {
+    border-radius: 0.75rem;
+    overflow: hidden; /* Memastikan sudut tabel mengikuti card */
+}
+
+.table thead th {
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* 6. Header & Navigasi Kustom */
+.navbar-brand {
+    letter-spacing: 0.5px; /* Memberi sedikit jarak antar huruf */
+}
+
+header.bg-primary {
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0); /* Gradient untuk header admin */
+}
+
+nav.bg-success {
+     background: linear-gradient(90deg, #198754, #20c997); /* Gradient untuk header user */
+}
+
+/* 7. Kartu Menu di Dashboard */
+.card.card-body.shadow-sm a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card.card-body.shadow-sm:hover {
+    background-color: #f8f9fa; /* Memberi feedback saat disentuh */
+}
+
+/* 8. Badge (Label Status) */
+.badge {
+    font-size: 0.8rem;
+    padding: 0.5em 0.7em;
+}
