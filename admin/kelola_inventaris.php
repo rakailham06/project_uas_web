@@ -34,10 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $lokasi_penyimpanan = $_POST['lokasi_penyimpanan'];
 
     if (!empty($id_inventaris)) { // Mode Update
-        $stmt = $conn->prepare("UPDATE inventaris SET kode_barang=?, nama_barang=?, jumlah=?, satuan=?, kondisi=?, tanggal_perolehan=?, lokasi_penyimpanan=? WHERE id_inventaris=?");
+        $stmt = $conn->prepare("UPDATE raka_inventaris SET kode_barang=?, nama_barang=?, jumlah=?, satuan=?, kondisi=?, tanggal_perolehan=?, lokasi_penyimpanan=? WHERE id_inventaris=?");
         $stmt->bind_param("ssissssi", $kode_barang, $nama_barang, $jumlah, $satuan, $kondisi, $tanggal_perolehan, $lokasi_penyimpanan, $id_inventaris);
     } else { // Mode Insert
-        $stmt = $conn->prepare("INSERT INTO inventaris (id_pengurus_pencatat, kode_barang, nama_barang, jumlah, satuan, kondisi, tanggal_perolehan, lokasi_penyimpanan) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO raka_inventaris (id_pengurus_pencatat, kode_barang, nama_barang, jumlah, satuan, kondisi, tanggal_perolehan, lokasi_penyimpanan) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("isssisss", $id_pengurus_pencatat, $kode_barang, $nama_barang, $jumlah, $satuan, $kondisi, $tanggal_perolehan, $lokasi_penyimpanan);
     }
     
